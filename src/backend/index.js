@@ -1,4 +1,3 @@
-PORT = process.env.PORT || 3003
 const express = require("express");
 const app = express();
 const router = express.Router();
