@@ -1,0 +1,121 @@
+.mealDiv {
+    width: 100%;
+    border-bottom: 1px groove grey;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+  }
+  .mealUl {
+    width: 60%;
+    margin-left: 50%;
+  }
+
+  .firstSection {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .homeImages {
+    max-width: 100%;
+    margin-top: -12%;
+    margin-bottom: -18%;
+    position: relative;
+    z-index: 1;
+    clip-path: inset(20% 0% 30%  0%);
+  }
+  .searchBar {
+    align-self: center;
+    margin-top: 13%;
+    position: absolute;
+    padding: auto;
+    z-index: 2;
+   }
+   .searchBar input ,placeholder {
+  font-weight: bold;
+  font-size: 2vw;
+  border: transparent;
+  border-radius:0.5em;
+  text-align: center;
+  background-color: gray;
+  color: honeydew;
+   }
+   
+  .formSection {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 1px groove grey;
+  }
+  
+  .divAbout {
+    padding-top: 2%;
+    width: 40%;
+    float: right;
+  }
+  .myImage {
+    width: 30%;
+    border: solid black;
+    border-radius: 5%;
+    margin-left: 30%;
+  }
+  .mealSharingForm {
+    width: 50%;
+    margin-right: 3%;
+  }
+  .mealSharingForm input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+  }
+  .mealSharingForm label, button {
+    font-size: 2vw;
+  }
+
+    #homeHref {
+        position: absolute;
+        text-align: center;
+        margin-top: 10%;
+        border-radius: 10px;
+        border-style: solid;
+      }
+
+
+
+      @media only screen and (min-width: 300px) and (max-width: 750px) {
+        .formSection {
+          width: 100%;
+          height: auto;
+          margin: auto;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          border-top: 1px groove grey;
+        }
+        
+        .divSlogan {
+          padding-top: 2%;
+          width: 100%;
+          float: right;
+        }
+        .mealSharingForm  {
+          width: 100%;
+        }
+        .mealSharingForm input {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          font-size: 2vw;
+        }
+        .mealSharingForm label, button {
+          font-size: 2vw;
+        }
+    }

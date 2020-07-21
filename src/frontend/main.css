@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;  
+}
+
+body {
+  width: 90%;
+  height: 100vh;
+  color: #212529;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin: auto;
+  background-image: url("../img/img1.png");
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+header {
+  background-color:#603FC4;
+  width: 100%;
+  padding-left: 5%;
+  height: auto;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.header-text {
+  width: 80%;
+}
+.headerNav {
+  width: 20%;
+  float: right;
+}
+.h1Header {
+  position: relative;
+}
+.h2Header {
+  position: absolute;
+  top: 12%; 
+}
+.mainDiv {
+  width: 100%;
+  margin: auto;
+  padding: auto;
+}
+
+footer {
+  background-color:#603FC4;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  color: #fff;
+}
+footer p, ul {
+  list-style: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size:8vw;
+  padding: auto;
+}
+h2 {
+  padding: 2rem;
+  font-size: 6vw;
+  padding: auto;
+  text-transform: uppercase;
+  color: black;
+  display: flex;
+}
+h3 {
+  font-size: 1rem;
+  font-size:4vw;
+  padding: auto;
+  color: black;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1rem;
+  font-size:2vw;
+  padding: auto;
+}
+p {
+  margin: auto;
+  padding: 3px;
+  font-size:2vw;
+}
+li {
+  list-style-type:none;
+  font-size:1.5vw;
+ }
+a:link {
+  text-decoration: none;
+}
+a {
+  text-align: center;
+  font-weight: bold;
+  font-size:2vw;
+}
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 750px) {
+  body {
+     font-size: 1vw; 
+     margin: auto;
+     padding: auto;
+    }
+  .mainDiv {
+      margin: auto;
+    }
+    .h2Header {
+      position: absolute;
+      top: 5%; 
+    }
+  footer, header {
+        padding: auto;
+        margin: auto;
+    }
+  .navigation {
+      background-color: rgb(202, 202, 202);
+      width: 8rem;
+      height: 2rem;
+      }
+  .firstSection {
+      width: fit-content;
+      padding: auto;
+  }
+  table {
+  margin: auto;
+  }
+  a {
+    text-align: center;
+    font-weight: bold;
+    font-size:1vw;
+  }
+  button {
+      margin: 0px;
+  }
+  button:hover {
+      transform:scale(1);
+  }
+}

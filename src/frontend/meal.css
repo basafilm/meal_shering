@@ -1,0 +1,40 @@
+.reservReviewDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 2vw;
+  padding: 5rem;
+}
+.reservReviewDiv h4 {
+  color: black;
+}
+.reserveForm {
+  width: 50%;
+  margin: auto;
+}
+.reserveForm input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+  }
+  .reserveForm label, button {
+  font-size: 2vw;
+  }
+  .reviewForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+  }
+  .reviewForm select{
+    margin: auto;
+    width: 30%;
+    font-size: 2vw;
+  }
+  .reviewForm button {
+    margin: auto;
+    width: 30%;
+    font-size: 2vw;
+  }
