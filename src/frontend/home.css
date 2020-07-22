@@ -106,6 +106,10 @@
           width: 100%;
           float: right;
         }
+        .divAbout {
+          padding-top: 2%;
+          width: 100%;
+        }
         .mealSharingForm  {
           width: 100%;
         }
