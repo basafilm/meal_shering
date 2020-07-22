@@ -28,6 +28,7 @@
     position: relative;
     z-index: 1;
     clip-path: inset(20% 0% 30%  0%);
+    -webkit-clip-path:inset(20% 0% 30%  0%)
   }
   .searchBar {
     align-self: center;
