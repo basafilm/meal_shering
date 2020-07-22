@@ -61,7 +61,7 @@ const formSection = document.querySelector('.formSection')
         divAbout.appendChild(myImage)
 
         const aboutP = document.createElement("p")
-        aboutP.innerText = "Once upon a time a filmmaker forced to leave his country. He toke his  backpake and went from one country to another one. Finally he found himself in beautifull city of Copenhagen where he soposide to find job as a filmmaker, but didn't ! He wrote tens of appplications and send them to whereever address he found but he didn't recivied any responce! It was the main reason that he decided to become a web developer. He found his way to Hack Your Future-Copenhagen and right now he is in the proccess of hacking his future! This meal sharing website is a kind of home work having magical affect for tasting nations' dishes! Watch pictures for about ten secounds , read the discriptions and try to feel the tasts! "
+        aboutP.innerText = "Once upon a time a filmmaker forced to leave his country. He takes his backpack and went from one country to another one. Finally, he found himself in beautiful city of Copenhagen where he supposed to find job as a filmmaker but didn’t! He wrote tens of applications and send them to wherever address he found but he didn't receive any response! It was the main reason that he decided to become a web developer. He found his way to Hack Your Future-Copenhagen and right now he is in the process of hacking his future! This meal sharing website is a kind of homework having magical affect for tasting nations' dishes! Watch pictures for about ten seconds, read the descriptions and try to feel the tastes!"
         divAbout.appendChild(aboutP)
 
 // search function for meals
