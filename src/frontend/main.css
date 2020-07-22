@@ -39,8 +39,9 @@ header {
   position: relative;
 }
 .h2Header {
+  display: flex;
   position: absolute;
-  top: 12%; 
+  margin-top: -15%; 
 }
 .mainDiv {
   width: 100%;
@@ -107,12 +108,12 @@ a {
 }
 /* unvisited link */
 a:link {
-  color: red;
+  color: green;
 }
 
 /* visited link */
 a:visited {
-  color: green;
+  color: greenyellow;
 }
 
 /* mouse over link */
@@ -135,8 +136,9 @@ a:active {
       margin: auto;
     }
     .h2Header {
+      display: flex;
       position: absolute;
-      top: 5%; 
+      margin-top: -15%; 
     }
   footer, header {
         padding: auto;
