@@ -24,6 +24,7 @@
     max-width: 100%;
     margin-top: -12%;
     margin-bottom: -18%;
+    display: -webkit-flex;
     position: relative;
     z-index: 1;
     clip-path: inset(20% 0% 30%  0%);
@@ -122,4 +123,5 @@
         .mealSharingForm label, button {
           font-size: 2vw;
         }
+ 
     }
