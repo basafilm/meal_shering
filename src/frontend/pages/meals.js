@@ -152,7 +152,7 @@ window.handleMealsRequest = async () => {
                       const btn = document.createElement("button")
                       td4.appendChild(btn)
                       const aTag = document.createElement('a') 
-                      aTag.innerText = "Not Availble!"
+                      aTag.innerText = "Fully booked!"
                       btn.appendChild(aTag)
                     }
                   });
