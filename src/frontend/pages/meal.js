@@ -56,16 +56,16 @@ const ulTag = document.querySelector('ul');
               <input type="text" id="secondName" name="secondName" required>
 
               <label for="phoneNum">Phone Number:</label>
-              <input type="text" id="phoneNum" name="phoneNum" required>
+              <input type="tel" id="phoneNum" name="phoneNum" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
 
               <label for="emailAdd">Email Address:</label>
-              <input type="text" id="emailAdd" name="emailAdd" required>
+              <input type="email" id="emailAdd" name="emailAdd" required>
               <input type ="hidden" name= "meal_Id" value= ${meal.id}>
 
               <label for="number_of_guests">Number of guests:</label>
               <input type="number" id="number_of_guests" name="number_of_guests" min="1"max="100" required>
 
-              <button type ="submit" value= "Submit">Submit</button>
+              <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
               </form>`)
 
 
@@ -87,7 +87,7 @@ const ulTag = document.querySelector('ul');
               <input type ="hidden" name= "meal_Id" value= ${meal.id}>
               <button type ="submit" value= "Submit">Submit</button>
               </form>`)
-
+       
 })
 
   }
