@@ -30,21 +30,21 @@ const formSection = document.querySelector('.formSection')
                       <h3>Share A New Meal : </h3>
                     <form action="../../api/meals" method ="post">
                     <label for="title">Title:</label>
-                    <input type="text" id="title" name="title" placeholder="required" required><br>
+                    <input type="text" id="title" name="title" required><br>
                     
                     <label for="description">Description:</label>
-                    <input type="text" id="description" name="description" placeholder="required" required>
+                    <input type="text" id="description" name="description" required>
                     
                     <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" placeholder="required" required>
+                    <input type="text" id="location" name="location" required>
                     <label for="when"> When:</label>
-                    <input type="text" id="when" name="when" placeholder ="e.g. 2020-mm-dd 00:00:00"required>
+                    <input type="text" id="when" name="when" placeholder ="e.g. 2020-mm-dd hh:mm:ss"required>
                     <label for="max_reservations"> max_reservations:</label>
-                    <input type="text" id="max_reservations" name="max_reservations" placeholder="required" required>
+                    <input type="text" id="max_reservations" name="max_reservations" required>
                     <label for="price">Price:</label>
-                    <input type="text" id="price" name="price" placeholder="required" required>
+                    <input type="text" id="price" name="price" required>
                     <label for="created_date">Created Date:</label>
-                    <input type="text" id="created_date" name="created_date" placeholder ="e.g. 2020-mm-dd 00:00:00" required>
+                    <input type="text" id="created_date" name="created_date" placeholder ="e.g. 2020-mm-dd hh:mm:ss" required>
                     
                       <button type ="submit" value= "Submit">Submit</button>
                   <h3>Organics : </h3>
