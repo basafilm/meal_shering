@@ -56,10 +56,10 @@ const ulTag = document.querySelector('ul');
               <input type="text" id="secondName" name="secondName" required>
 
               <label for="phoneNum">Phone Number:</label>
-              <input type="tel" id="phoneNum" name="phoneNum" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+              <input type="tel" id="phoneNum" name="phoneNum" pattern="[0-9]{3}-[0-9]{8}" placeholder="000-00000000" required>
 
               <label for="emailAdd">Email Address:</label>
-              <input type="email" id="emailAdd" name="emailAdd" required>
+              <input type="email" id="emailAdd" name="emailAdd" placeholder="enter your email" required>
               <input type ="hidden" name= "meal_Id" value= ${meal.id}>
 
               <label for="number_of_guests">Number of guests:</label>
