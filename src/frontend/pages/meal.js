@@ -20,19 +20,28 @@ window.handleMealRequest =  async (params) => {
         div1.appendChild(ulTage)
 
 
-// geting meal with Id
+// geting meal with Id and avilble seats
+const avilbleResponse = await fetch("/api/available_reserve/")
+const availbeRes = await avilbleResponse.json()
+const getavilbleSeat =availbeRes.map(seat => seat.totalOfGuests)
+ getavilbleSeat.unshift(null)
+
 const getParams =   `/api/meals/${params.id}`;
 const mealResponse = await fetch(getParams)
 const meal = await mealResponse.json()
 
+
 const ulTag = document.querySelector('ul');
- meal.forEach(meal => {
+meal.forEach(meal => {
   const d = new Date(meal.when)
   const date =d.getFullYear()
   const houer = d.getHours()
   const minute = d.getMinutes()
   const seconds = d.getSeconds()
-  
+
+ // remaining of avilble seats
+  const remained = meal.max_reservations- getavilbleSeat[meal.id]
+
         ulTag.innerHTML = `<li> <strong>Title:</strong> ${ meal.title} </li> 
         <li> <strong>Description:</strong> ${meal.description}</li> 
         <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
@@ -63,7 +72,7 @@ const ulTag = document.querySelector('ul');
               <input type ="hidden" name= "meal_Id" value= ${meal.id}>
 
               <label for="number_of_guests">Number of guests:</label>
-              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${meal.max_reservations} placeholder=" ${meal.max_reservations} seat available" required>
+              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remained} placeholder=" ${remained} seat available" required>
 
               <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
               </form>`)
