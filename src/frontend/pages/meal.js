@@ -63,7 +63,7 @@ const ulTag = document.querySelector('ul');
               <input type ="hidden" name= "meal_Id" value= ${meal.id}>
 
               <label for="number_of_guests">Number of guests:</label>
-              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${meal.max_reservations} required>
+              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${meal.max_reservations} placeholder=" ${meal.max_reservations} seat available" required>
 
               <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
               </form>`)
