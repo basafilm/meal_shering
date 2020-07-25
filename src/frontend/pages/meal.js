@@ -63,7 +63,7 @@ const ulTag = document.querySelector('ul');
               <input type ="hidden" name= "meal_Id" value= ${meal.id}>
 
               <label for="number_of_guests">Number of guests:</label>
-              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max="100" required>
+              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${meal.max_reservations} required>
 
               <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
               </form>`)
@@ -73,7 +73,7 @@ const ulTag = document.querySelector('ul');
               <form class="reviewForm" action="../../api/reviews" method ="post">
               <h4> Want to give a feedback ?:</h4>
               <label for="description">Wrie a short review:</label>
-              <input type="text" id="description" name="description" maxlength = "40">
+              <input type="text" id="description" name="description" maxlength = "40" required>
             </select>
               <label for="stars"> Give some stars<span style="color: rgb(255,223,0);"> &#11089;</span>:</label>
               <select id="stars" name="stars">
