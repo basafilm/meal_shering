@@ -140,6 +140,9 @@ a:active {
       position: absolute;
       margin-top: -15%; 
     }
+    h3 a {
+      font-size: 2vw; 
+    }
   footer, header {
         padding: auto;
         margin: auto;
