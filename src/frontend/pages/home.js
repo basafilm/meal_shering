@@ -1,11 +1,12 @@
 window.handleHomeRequest = async ( req, res) => {
 const body = document.querySelector('body')
 const headerNav = document.querySelector('.headerNav')
-      const h3Tag = document.createElement('h3')
-            h3Tag.setAttribute('id' , "homeHref")
-            headerNav.appendChild(h3Tag)
+      const aTag = document.createElement('a')
+            aTag.setAttribute('id' , "homeHref")
+            headerNav.appendChild(aTag)
       const meals = `/meals`
-            h3Tag.innerHTML = `<a href= ${meals}> Meals Option </a>`;
+            aTag.href = meals 
+            aTag.innerText ="Meals Option"
 
 const mealsSection = document.getElementsByClassName("firstSection")[0]
       const imagediv = document.createElement("div")

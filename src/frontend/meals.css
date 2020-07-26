@@ -16,40 +16,19 @@ padding: auto;
     height: fit-content;
     margin: auto;
     font-weight: bold;
-    border-bottom: 1px groove grey;
+    padding: 10px;
+  }
+  .btnDive {
+    width: 30%;
+    height: fit-content;
+    margin: auto;
+    font-weight: bold;
     padding: 10px;
   }
   .childDive img {
     max-width: 100%;
     border-radius: 50%
   }
-  /* table {
-    width: 80%;
-    margin: auto;
-  }
-  td {
-    border-bottom: 1px groove grey;
-  }
-  .tabletext {
-    width: 30%;
-    max-width: 100%;
-    padding: 10px;
-  }
-  .tableImage {
-    width: 40%;
-    max-width: 100%;
-    align-items: center;
-    padding: 10px;
-  }
-  .tableImage img {
-    max-width: 100%;
-    border-radius: 50%
-  }
-  .tableReviw {
-    width: 30%;
-    max-width: 100%; 
-} */
-
   button {
     background-color: rgb(202, 202, 202);
     border: gray solid;
@@ -65,22 +44,26 @@ padding: auto;
 pre {
 margin-bottom: 1em;
 width: auto;
+height: 90px;
 overflow-y:scroll;
 font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 display: flex;
 flex-direction: row-reverse;
 }
 pre li {
-  margin: auto;
+  width: 100%;
   padding:auto;
 }
-
+strong {
+  font-size: 2vw;
+}
     @media only screen and (max-width: 600px) {
       .mealGeneralDive {
         width: 100%;
         margin: auto;
         display: flex;
-        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
     
       } 
       .childDive {
@@ -95,11 +78,16 @@ pre li {
         max-width: 100%;
         border-radius: 0%
       }
-      button {
+      .btnDive {
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+      }
+       button {
         background-color: rgb(202, 202, 202);
         border: gray solid;
         padding:auto ;
-        width: auto;
+        width: 100%;
         height: auto;
         text-align: center;
         border-radius: 5px;
@@ -107,25 +95,28 @@ pre li {
         line-height: 3vw; 
         }
     ul li {
-      font-size: large;
+      width: 100%;
+      font-size: 2.5vw;
+    }
+    strong {
+      font-size: 3vw;
     }
     a {
-      font-size: 3vw;
+      font-size: 2.5vw;
     }
     h4 {
       font-size: large;
     }
     pre {
     margin-bottom: 1em;
-    width: auto;
+    width: 100%;
     overflow-y:scroll;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: row-reverse;
     }
     pre li {
-      margin: auto;
-      padding:auto;
-      font-size:3vw;
+      width: 100%;
+      font-size: 3vw;
     }
     }

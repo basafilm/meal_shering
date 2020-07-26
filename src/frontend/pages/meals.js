@@ -1,10 +1,11 @@
 window.handleMealsRequest = async () => {
   const headerNav = document.querySelector('.headerNav')
-      const h3Tag = document.createElement('h3')
-            h3Tag.setAttribute('id' , "homeHref")
-            headerNav.appendChild(h3Tag)
+      const aTag = document.createElement('a')
+            aTag.setAttribute('id' , "homeHref")
+            headerNav.appendChild(aTag)
       const home = `/`
-            h3Tag.innerHTML = `<a href= ${home}> << Back </a>`;
+            aTag.href = home;
+            aTag.innerHTML = " << Back ";
 
 
   const section = document.querySelector('.firstSection')
@@ -38,13 +39,13 @@ const dive3 = document.createElement('dive')
       dive3.setAttribute("class", 'childDive')
       generalDiv.appendChild(dive3)
  const dive4 = document.createElement('dive')
-       dive4.setAttribute("class", 'childDive')
+       dive4.setAttribute("class", 'btnDive')
       generalDiv.appendChild(dive4)
 const dive5 = document.createElement('dive')
-      dive5.setAttribute("class", 'childDive')
+      dive5.setAttribute("class", 'btnDive')
       generalDiv.appendChild(dive5)
 const dive6 = document.createElement('dive')
-      dive6.setAttribute("class", 'childDive')
+      dive6.setAttribute("class", 'btnDive')
       generalDiv.appendChild(dive6)
 
  // meals text section
@@ -101,8 +102,10 @@ const dive6 = document.createElement('dive')
                   <li> <strong>Description:</strong> No reviews</li>`
             } else {
                   revUlTag.innerHTML = `
-                  <li class=" "><span style="color: rgb(255,223,0);">${output.slice(0, 5).join('')}</strong></li>
-                  <pre><li>${meal.revDescrip.split(",").join('\n')}</li></<pre>`
+                  <li class=" "><span style="color: rgb(255,223,0);">${output.slice(0, 5).join('')}</strong></li>`
+                  const pre = document.createElement('pre')
+                  pre.insertAdjacentHTML("afterbegin" ,`<li>${meal.revDescrip.split(",").join('\n')}</li>`)
+                  dive3.appendChild(pre)
             }
                               // review Section
                               const reviewsBtn = document.createElement("button")

@@ -1,11 +1,12 @@
 window.handleMealRequest =  async (params) => {
   // back button
   const headerNav = document.querySelector('.headerNav')
-  const headerH3Tag = document.createElement('h3')
-        headerH3Tag.setAttribute('id' , "homeHref")
-        headerNav.appendChild(headerH3Tag)
+  const aTag = document.createElement('a')
+        aTag.setAttribute('id' , "homeHref")
+        headerNav.appendChild(aTag)
   const meals = `/meals`
-        headerH3Tag.innerHTML = `<a href= ${meals}> Meals Option </a>`;
+        aTag.href = meals
+        aTag.innerHTML = "Meals Option";
 
   const firstSection = document.querySelector('.firstSection')
   const div1 = document.createElement('div')
