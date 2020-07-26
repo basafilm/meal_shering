@@ -6,7 +6,7 @@ const knex = require("../database");
     router.get("/:id", async (request, response) => {
       const { id } = request.params;
       try {
-       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.title, meals.description AS mealDescrip, meals.location, meals.when, meals.max_reservations, meals.price, SUM(reservations.number_of_guests)  AS totalOfGuests'))
+       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, SUM(reservations.number_of_guests)  AS totalOfGuests'))
         .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
         .where(knex.raw('meals.id =?',id))
         .groupBy('meals.id')
