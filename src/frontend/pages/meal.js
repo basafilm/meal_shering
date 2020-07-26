@@ -65,8 +65,8 @@ meal.forEach(meal => {
               <input type="email" id="emailAdd" name="emailAdd" placeholder="enter your email" required>
               <input type ="hidden" name= "meal_Id" value= ${meal.id}>
 
-              <label for="number_of_guests">Number of guests:</label>
-              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remainSeats} placeholder=" ${remainSeats} seat available" required>
+              <label for="number_of_guests">Number of guests (only ${remainSeats} seat available): </label>
+              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remainSeats} required>
 
               <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
               </form>`)

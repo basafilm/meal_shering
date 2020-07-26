@@ -91,8 +91,3 @@ const formSection = document.querySelector('.formSection')
                                     ulSearchTage.innerHTML = eachItem   
                         };    
 };
-
-
-//  // if any links are added to the dom, use this function
-//   // make the router handle those links.
-// router.updatePageLinks();
