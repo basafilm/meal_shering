@@ -1,3 +1,16 @@
+.mealDiv {
+  width: 100%;
+  border-bottom: 1px groove grey;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: auto;
+}
+.mealUl {
+  width: 60%;
+  margin-left: 50%;
+}
+
 .reservReviewDiv {
   width: 100%;
   display: flex;
@@ -40,6 +53,19 @@
   }
 
   @media only screen and (max-width: 600px) {
+    .mealDiv {
+      width: 100%;
+      border-bottom: 1px groove grey;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      padding: auto;
+    }
+    .mealUl {
+      width: 100%;
+      margin-left: 10%;
+    }
+  
     .reserveForm {
       width: 100%;
       margin: auto;
@@ -51,5 +77,4 @@
       margin: auto;
       margin-top: 10%;
     } 
-
   }

@@ -1,17 +1,4 @@
-.mealDiv {
-    width: 100%;
-    border-bottom: 1px groove grey;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: auto;
-  }
-  .mealUl {
-    width: 60%;
-    margin-left: 50%;
-  }
-
-  .firstSection {
+.firstSection {
     width: 70%;
     height: auto;
     margin: auto;
