@@ -19,16 +19,6 @@ window.handleMealRequest =  async (params) => {
         div1.appendChild(h3Tage)
         div1.appendChild(ulTage)
 
-  
-        
-// geting meal with Id and avilble seats
-// const avilbleResponse = await fetch("/api/reservations")
-// const availbeRes = await avilbleResponse.json()
-// const getavilbleSeat =availbeRes.map(seat => seat.number_of_guests)
-//  getavilbleSeat.unshift(null)
-// console.log(availbeRes)
-
-
 const getParams =   `/api/meals/${params.id}`;
 const mealResponse = await fetch(getParams)
 const meal = await mealResponse.json()
