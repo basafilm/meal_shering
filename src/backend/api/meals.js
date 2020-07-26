@@ -72,7 +72,11 @@ let meals = await knex('meals')
     router.get("/:id", async (request, response) => {
       const { id } = request.params;
       try {
-       const meal=  await knex('meals').select('*').where({id});
+       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.title, meals.description AS mealDescrip, meals.location, meals.when, meals.max_reservations, meals.price, SUM(reservations.number_of_guests)  AS totalOfGuests'))
+        .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
+        .where(knex.raw('meals.id =?',id))
+        .groupBy('meals.id')
+      //  const meal=  await knex('meals').select('*').where({id})
        const getMeal =meal.map(m=>m.id)
        // to find out if Id exist 
           if(getMeal.length===0){
