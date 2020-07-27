@@ -58,43 +58,43 @@ pre li {
 strong {
   font-size: 2vw;
 }
-    @media only screen and (max-width: 600px) {
-      .mealGeneralDive {
-        width: 100%;
-        margin: auto;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
-    
-      } 
-      .childDive {
-        width: 100%;
-        height: fit-content;
-        margin: auto;
-        font-weight: bold;
-        padding: 10px;
-        border: none
-      }
-      .childDive img {
-        max-width: 100%;
-        border-radius: 0%
-      }
-      .btnDive {
-        width: 30%;
-        display: flex;
-        flex-direction: row;
-      }
-       button {
-        background-color: rgb(202, 202, 202);
-        border: gray solid;
-        padding:auto ;
-        width: 100%;
-        height: auto;
-        text-align: center;
-        border-radius: 5px;
-        border-color: rgb(233, 168, 5);
-        line-height: 3vw; 
-        }
+@media only screen and (max-width: 600px) {
+  .mealGeneralDive {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+  } 
+  .childDive {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    font-weight: bold;
+    padding: 10px;
+    border: none
+  }
+  .childDive img {
+    max-width: 100%;
+    border-radius: 0%
+  }
+  .btnDive {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+  }
+    button {
+    background-color: rgb(202, 202, 202);
+    border: gray solid;
+    padding:auto ;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: 5px;
+    border-color: rgb(233, 168, 5);
+    line-height: 3vw; 
+    }
     ul li {
       width: 100%;
       font-size: 2.5vw;
@@ -108,6 +108,10 @@ strong {
     h4 {
       font-size: large;
     }
+    .btnDive h5 {
+      font-size: 2.5vw;
+    }
+
     pre {
     margin-bottom: 1em;
     width: 100%;

@@ -23,7 +23,6 @@ window.handleMealRequest =  async (params) => {
 const getParams =   `/api/meals/${params.id}`;
 const mealResponse = await fetch(getParams)
 const meal = await mealResponse.json()
-console.log(meal)
 
 const ulTag = document.querySelector('ul');
 meal.forEach(meal => {
