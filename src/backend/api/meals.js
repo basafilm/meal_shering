@@ -5,11 +5,12 @@ const knex = require("../database");
     // Returns meal by id	
     router.get("/:id", async (request, response) => {
       const { id } = request.params;
+      const courentDate = Date.now()
       try {
        let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, meals.created_date, SUM(reservations.number_of_guests)  AS totalOfGuests'))
         .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
         .where(knex.raw('meals.id =?',id))
-        // .orWhereRaw(knex.raw('meals.created_date >?', new Date().toISOString()))
+        .andWhere(knex.raw('meals.created_date >?',courentDate))
         .groupBy('meals.id')
       //  const meal=  await knex('meals').select('*').where({id})
        const getMeal =meal.map(m=>m.id)
