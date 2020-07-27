@@ -33,14 +33,12 @@ const formSection = document.querySelector('.formSection')
 
                     <label for="title">Title:</label>
                     <input type="text" id="title" name="title" required><br>
-                    
                     <label for="description">Description:</label>
                     <input type="text" id="description" name="description" required>
-                    
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location" required>
                     <label for="when"> When:</label>
-                    <input type="datetime" id="when" name="when" placeholder ="e.g. ${courentDate}" required>
+                    <input type="datetime" id="when" name="when" placeholder ="e.g. ${courentDate}" min="${courentDate}" required>
                     <label for="max_reservations"> max_reservations:</label>
                     <input type="text" id="max_reservations" name="max_reservations" required>
                     <label for="price">Price:</label>
