@@ -29,9 +29,7 @@ const ulTag = document.querySelector('ul');
 meal.forEach(meal => {
   const d = new Date(meal.when)
   const date =d.getFullYear()
-  const houer = d.getHours()
-  const minute = d.getMinutes()
-  const seconds = d.getSeconds()
+  const houer = d.toLocaleTimeString()
 
  // remaining of avilble seats
  const remainSeats= meal.max_reservations- meal.totalOfGuests
@@ -43,7 +41,7 @@ meal.forEach(meal => {
         <li><strong>Price:</strong> ${meal.price}.Kr </li>
         <li><strong>Location:</strong> ${meal.location}</li>
         <li><strong>Date:</strong> ${date}/${d.getMonth()}/${d.getDay()} </li>
-        <li><strong>When:</strong> ${houer}: ${minute}: ${seconds} </li>`
+        <li><strong>When:</strong> ${houer} </li>`
 
         const formSection =document.querySelector('.formSection')
         const reservReviewDiv = document.createElement('div')

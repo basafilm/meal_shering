@@ -70,10 +70,8 @@ const dive6 = document.createElement('dive')
 
         // date by details
           const d = new Date(meal.when)
-          const date =d.getFullYear()
-          const houer = d.getHours()
-          const minute = d.getMinutes()
-          const seconds = d.getSeconds()
+          const date =d.toLocaleString('default', { year: 'numeric', month: 'long', day: 'numeric'})
+          const houer = d.toLocaleTimeString()
 
             //console.log(day)
             ulTag.innerHTML = `<li> <strong>Title:</strong> ${ meal.title} </li> 
@@ -81,8 +79,8 @@ const dive6 = document.createElement('dive')
             <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
             <li><strong>Price:</strong> ${meal.price}.Kr </li>
             <li><strong>Location:</strong> ${meal.location}</li>
-            <li><strong>Date:</strong> ${date}/${d.getMonth()}/${d.getDay()} </li>
-            <li><strong>When:</strong> ${houer}: ${minute}: ${seconds} </li> `
+            <li><strong>Date:</strong> ${date} </li>
+            <li><strong>When:</strong> ${houer} </li> `
 
             // review text Part
             // stars converter 
