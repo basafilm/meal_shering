@@ -20,7 +20,7 @@ const mealsSection = document.getElementsByClassName("firstSection")[0]
                     img.setAttribute('class', "homeImages")
                     imagediv.appendChild(img)
 
-const courrentDat = new Date()
+const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
 const formSection = document.querySelector('.formSection')
             const divAbout = document.createElement("div")
             divAbout.setAttribute('class' ,"divAbout")
@@ -40,13 +40,13 @@ const formSection = document.querySelector('.formSection')
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location" required>
                     <label for="when"> When:</label>
-                    <input type="datetime" id="when" name="when" placeholder ="e.g. yyyy-mm-dd hh:mm:ss" required>
+                    <input type="datetime" id="when" name="when" placeholder ="e.g. ${courentDate}" required>
                     <label for="max_reservations"> max_reservations:</label>
                     <input type="text" id="max_reservations" name="max_reservations" required>
                     <label for="price">Price:</label>
                     <input type="text" id="price" name="price" required>
                     <label for="created_date">Created Date:</label>
-                    <input type="datetime" id="created_date" name="created_date" value="${courrentDat}" required>
+                    <input type="datetime" id="created_date" name="created_date" value="${courentDate}" required>
                     
                       <button type ="submit" value= "Submit">Submit</button>
                   <h3>Organics : </h3>
