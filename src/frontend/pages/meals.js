@@ -130,10 +130,10 @@ const dive6 = document.createElement('dive')
                       const remained = meal.max_reservations - meal.totalOfGuests
                       const remainBtn = document.createElement("button")
                       dive5.appendChild(remainBtn)
-                      const remainATag = document.createElement('a') 
+                      const remainH4Tag = document.createElement('h4') 
 
-                      remainATag.innerText=`${remained} Seat availble`
-                      remainBtn.appendChild(remainATag) 
+                      remainH4Tag.innerText=`${remained} Seat availble`
+                      remainBtn.appendChild(remainH4Tag) 
 
                     } else {
                       //const table = document.querySelector('section > table')
