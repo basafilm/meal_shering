@@ -10,7 +10,6 @@ const knex = require("../database");
         .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
         .where(knex.raw('meals.id =?',id))
         .groupBy('meals.id')
-      //  const meal=  await knex('meals').select('*').where({id})
        const getMeal =meal.map(m=>m.id)
        // to find out if Id exist 
           if(getMeal.length===0){
