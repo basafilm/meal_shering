@@ -39,7 +39,7 @@ const formSection = document.querySelector('.formSection')
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location" required>
                     <label for="when"> When:</label>
-                    <input type="text" id="when" name="when" placeholder ="e.g. 2020-mm-dd hh:mm:ss"required>
+                    <input type="date" id="when" name="when" placeholder ="e.g. 2020-mm-dd hh:mm:ss" required>
                     <label for="max_reservations"> max_reservations:</label>
                     <input type="text" id="max_reservations" name="max_reservations" required>
                     <label for="price">Price:</label>
