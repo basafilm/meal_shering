@@ -2,11 +2,11 @@ window.handleHomeRequest = async ( req, res) => {
 const body = document.querySelector('body')
 const headerNav = document.querySelector('.headerNav')
       const aTag = document.createElement('a')
-            aTag.setAttribute('id' , "homeHref")
+            aTag.setAttribute('class' , "homeHref")
             headerNav.appendChild(aTag)
       const meals = `/meals`
             aTag.href = meals 
-            aTag.innerText ="menus"
+            aTag.innerText ="menu"
 
 const mealsSection = document.getElementsByClassName("firstSection")[0]
       const imagediv = document.createElement("div")

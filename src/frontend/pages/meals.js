@@ -1,7 +1,7 @@
 window.handleMealsRequest = async () => {
   const headerNav = document.querySelector('.headerNav')
       const aTag = document.createElement('a')
-            aTag.setAttribute('id' , "homeHref")
+            aTag.setAttribute('class' , "homeHref")
             headerNav.appendChild(aTag)
       const home = `/`
             aTag.href = home;

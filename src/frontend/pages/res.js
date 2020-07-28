@@ -1,7 +1,7 @@
 window.handleResRequest = async ( req, res) => {
     const headerNav = document.querySelector('.headerNav')
     const h3Tag = document.createElement('h3')
-          h3Tag.setAttribute('id' , "homeHref")
+          h3Tag.setAttribute('class' , "homeHref")
           headerNav.appendChild(h3Tag)
     const home = `/`
           h3Tag.innerHTML = `<a href= ${home}> Main Page </a>`;

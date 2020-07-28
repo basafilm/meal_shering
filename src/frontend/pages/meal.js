@@ -2,7 +2,7 @@ window.handleMealRequest =  async (params) => {
   // back button
   const headerNav = document.querySelector('.headerNav')
   const aTag = document.createElement('a')
-        aTag.setAttribute('id' , "homeHref")
+        aTag.setAttribute('class' , "homeHref")
         headerNav.appendChild(aTag)
   const meals = `/meals`
         aTag.href = meals
