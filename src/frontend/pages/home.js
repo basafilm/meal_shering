@@ -6,7 +6,7 @@ const headerNav = document.querySelector('.headerNav')
             headerNav.appendChild(aTag)
       const meals = `/meals`
             aTag.href = meals 
-            aTag.innerText ="Meals Option"
+            aTag.innerText ="menus"
 
 const mealsSection = document.getElementsByClassName("firstSection")[0]
       const imagediv = document.createElement("div")
@@ -56,12 +56,12 @@ const formSection = document.querySelector('.formSection')
         h3Sabout.innerText= "About This Page:"
         divAbout.appendChild(h3Sabout)
         const myImage = new Image()
-        myImage.src="../img/Malek.png"
+        myImage.src="../img/6.jpg"
         myImage.setAttribute('class', "myImage")
         divAbout.appendChild(myImage)
 
         const aboutP = document.createElement("p")
-        aboutP.innerText = "Once upon a time a filmmaker forced to leave his country. He takes his backpack and went from one country to another one. Finally, he found himself in beautiful city of Copenhagen where he supposed to find job as a filmmaker but didn’t! He wrote tens of applications and send them to wherever address he found but he didn't receive any response! It was the main reason that he decided to become a web developer. He found his way to Hack Your Future-Copenhagen and right now he is in the process of hacking his future! This meal sharing website is a kind of homework having magical affect for tasting nations' dishes! Watch pictures for about ten seconds, read the descriptions and try to feel the tastes!"
+        aboutP.innerText = "This is a simple web page made for hyf-Copenhagen NodeJS week 4 homework. But you can use this website and share your meal by filling out the Meal Sharing form. People can find your meal among others in the menus and they will be able to reserve a seat. The registration form limited by maximum space for reservation. please put a correct future date otherwise your meal will not be added to the menu. Your meal will be deleted when its due date expired."
         divAbout.appendChild(aboutP)
 
 // search function for meals
