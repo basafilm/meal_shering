@@ -6,7 +6,7 @@ window.handleMealRequest =  async (params) => {
         headerNav.appendChild(aTag)
   const meals = `/meals`
         aTag.href = meals
-        aTag.innerHTML = "Meals Option";
+        aTag.innerHTML = "Menu";
 
   const firstSection = document.querySelector('.firstSection')
   const div1 = document.createElement('div')
@@ -32,7 +32,7 @@ meal.forEach(meal => {
 
  // remaining of avilble seats
  const remainSeats= meal.max_reservations- meal.totalOfGuests
- 
+
         ulTag.innerHTML = `<li> <strong>Title:</strong> ${ meal.title} </li> 
         <li> <strong>Description:</strong> ${meal.description}</li> 
         <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
