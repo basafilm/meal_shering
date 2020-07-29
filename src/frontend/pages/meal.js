@@ -47,30 +47,36 @@ meal.forEach(meal => {
         const formSection =document.querySelector('.formSection')
         const reservReviewDiv = document.createElement('div')
               reservReviewDiv.setAttribute('class', "reservReviewDiv")
-              formSection.appendChild(reservReviewDiv)       
+              formSection.appendChild(reservReviewDiv)   
+              if (meal.totalOfGuests > meal.max_reservations) {
                 reservReviewDiv.insertAdjacentHTML("afterbegin" , ` 
               
-              <form class="reserveForm" action="../../api/reservations" method ="post">
-              <h4>Please fill out reservation form:</h4>
-             
-              <label for="firstName">First Name:</label>
-              <input type="text" id="firstName" name="firstName" required>
-              <label for="secondName">Last Name:</label>
-              <input type="text" id="secondName" name="secondName" required>
-
-              <label for="phoneNum">Phone Number:</label>
-              <input type="tel" id="phoneNum" name="phoneNum" pattern="[0-9]{3}-[0-9]{8}" placeholder="000-00000000" required>
-
-              <label for="emailAdd">Email Address:</label>
-              <input type="email" id="emailAdd" name="emailAdd" placeholder="enter your email" required>
-              <input type ="hidden" name= "meal_Id" value= ${meal.id}>
-
-              <label for="number_of_guests">Number of guests (only ${remainSeats} seat available): </label>
-              <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remainSeats} required>
-
-              <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
-              </form>`)
-
+                <form class="reserveForm" action="../../api/reservations" method ="post">
+                <h4>Please fill out reservation form:</h4>
+               
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="secondName">Last Name:</label>
+                <input type="text" id="secondName" name="secondName" required>
+  
+                <label for="phoneNum">Phone Number:</label>
+                <input type="tel" id="phoneNum" name="phoneNum" pattern="[0-9]{3}-[0-9]{8}" placeholder="000-00000000" required>
+  
+                <label for="emailAdd">Email Address:</label>
+                <input type="email" id="emailAdd" name="emailAdd" placeholder="enter your email" required>
+                <input type ="hidden" name= "meal_Id" value= ${meal.id}>
+  
+                <label for="number_of_guests">Number of guests (only ${remainSeats} seat available): </label>
+                <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remainSeats} required>
+  
+                <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
+                </form>`)
+              }  else {
+                reservReviewDiv.insertAdjacentHTML("afterbegin" , ` 
+              
+                <form class="reserveForm" action="../../api/reservations" method ="post">
+                <p> This meal fully booked and is not available for reservation! </p> `)
+              }  
 
               reservReviewDiv.insertAdjacentHTML("afterbegin" , ` 
               <form class="reviewForm" action="../../api/reviews" method ="post">

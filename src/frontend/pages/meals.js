@@ -10,7 +10,7 @@ window.handleMealsRequest = async () => {
 
   const section = document.querySelector('.firstSection')
   const h2Tag = document.createElement('h2')
-  h2Tag.innerText = "Meals: "
+  h2Tag.innerText = "menus: "
   section.appendChild(h2Tag)
 
   // fetch all meals and only avilble reservations 
