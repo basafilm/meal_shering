@@ -42,11 +42,10 @@ padding: auto;
     }
 pre {
 width: 100%;
-height: 250px;
-overflow:scroll;
+height: 150px;
+overflow-y:scroll;
 font-family:monospace, sans-serif;
 font-style: italic;
-
 }
 pre li {
   width: 100%;
@@ -112,6 +111,7 @@ strong {
     pre {
     margin-bottom: 1em;
     width: 100%;
+    height: 100px;
     overflow-y:scroll;
     font-family:monospace, sans-serif;
     display: flex;
