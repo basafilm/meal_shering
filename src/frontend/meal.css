@@ -76,6 +76,7 @@ font-size: 2vw;
       margin-left: 10%;
     }
     .mealUl li {
+      width: fit-content;
       font-size: 3vw;
       }
     .mealDiv img {
