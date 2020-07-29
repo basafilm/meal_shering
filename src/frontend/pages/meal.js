@@ -12,10 +12,6 @@ window.handleMealRequest =  async (params) => {
   const div1 = document.createElement('div')
   div1.setAttribute('class', "mealDiv")
   firstSection.appendChild(div1)
-  // const h3Tage = document.createElement('h4')
-  //       h3Tage.innerHTML = "You are booking for :" 
-  //       div1.appendChild(h3Tage)
- 
   const ulTage =document.createElement('ul')
         ulTage.setAttribute('class', "mealUl")
         div1.appendChild(ulTage)
@@ -23,7 +19,6 @@ window.handleMealRequest =  async (params) => {
 const getParams =   `/api/meals/${params.id}`;
 const mealResponse = await fetch(getParams)
 const meal = await mealResponse.json()
-
             // image 
             const images = ['../img/1.jpg','./../img/2.jpg','../img/3.jpg','../img/5.jpg', '../img/6.jpg' ]
             const imageRandoom = images[Math.floor(Math.random() * (images.length))];
@@ -37,7 +32,7 @@ meal.forEach(meal => {
 
  // remaining of avilble seats
  const remainSeats= meal.max_reservations- meal.totalOfGuests
-
+ console.log(meal.totalOfGuests)
 
         ulTag.innerHTML = `<li> <strong>Title:</strong> ${ meal.title} </li> 
         <li> <strong>Description:</strong> ${meal.description}</li> 

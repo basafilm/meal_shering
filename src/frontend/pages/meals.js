@@ -131,7 +131,8 @@ const dive6 = document.createElement('dive')
                       const remainBtn = document.createElement("button")
                       dive5.appendChild(remainBtn)
                       const remainH5Tag = document.createElement('h5') 
-
+console.log(remained)
+console.log(meal.totalOfGuests)
                       remainH5Tag.innerText=`${remained} Seat availble`
                       remainBtn.appendChild(remainH5Tag) 
 
