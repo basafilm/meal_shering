@@ -39,7 +39,7 @@ meal.forEach(meal => {
         <li><strong>Price:</strong> ${meal.price}.Kr </li>
         <li><strong>Location:</strong> ${meal.location}</li>
         <li><strong>Date:</strong> ${date}/${d.getMonth()}/${d.getDay()} </li>
-        <li><strong>When:</strong> ${houer} </li>`
+        <li><strong>Time:</strong> ${houer} </li>`
         img.src= imageRandoom
         div1.appendChild(img)
 

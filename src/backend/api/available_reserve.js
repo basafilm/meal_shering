@@ -6,9 +6,8 @@ console.log("domething")
 
 router.get("/", async (req, res) => {
   const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
-  console.log(courentDate)
     try {
-    let leftReservation = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.title, meals.description AS mealDescrip, meals.location, meals.when, meals.max_reservations, meals.price, SUM(DISTINCT reservations.number_of_guests)  AS totalOfGuests, AVG(reviews.stars) AS totalStars ,GROUP_CONCAT(reviews.description) AS revDescrip'))
+    let leftReservation = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.title, meals.description AS mealDescrip, meals.location, meals.when, meals.max_reservations, meals.price, SUM(DISTINCT reservations.number_of_guests)  AS totalOfGuests, AVG(reviews.stars) AS totalStars ,GROUP_CONCAT(DISTINCT reviews.description) AS revDescrip'))
     .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
     .leftJoin(knex.raw('reviews ON reviews.meal_Id = meals.id'))
     .where(knex.raw('meals.when >?',courentDate))

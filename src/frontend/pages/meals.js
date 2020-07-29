@@ -80,18 +80,18 @@ const dive6 = document.createElement('dive')
             <li><strong>Price:</strong> ${meal.price}.Kr </li>
             <li><strong>Location:</strong> ${meal.location}</li>
             <li><strong>Date:</strong> ${date} </li>
-            <li><strong>When:</strong> ${houer} </li> `
+            <li><strong>Time:</strong> ${houer} </li> `
 
             // review text Part
             // stars converter 
                         const starsNum = meal.totalStars
                         const STAR= "&#11089;"
                         stars = '';
-                        const output= []
+                        const starOutput= []
                         for ( i= 1; i<=starsNum; i++) {
                               if(i<starsNum) {
                               stars=STAR 
-                                    output.push(stars)
+                                    starOutput.push(stars)
                               }
                         }
 
@@ -100,7 +100,7 @@ const dive6 = document.createElement('dive')
                   <li> <strong>Description:</strong> No reviews</li>`
             } else {
                   revUlTag.innerHTML = `
-                  <li class=" "><span style="color: rgb(255,223,0);">${output.slice(0, 5).join('')}</strong></li>`
+                  <li class=" "><span style="color: rgb(255,223,0);">${starOutput.slice(0, 5).join('')}</strong></li>`
                   const pre = document.createElement('pre')
                   pre.insertAdjacentHTML("afterbegin" ,`<li>${meal.revDescrip.split(",").join('\n')}</li>`)
                   dive3.appendChild(pre)
