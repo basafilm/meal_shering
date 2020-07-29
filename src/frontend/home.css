@@ -24,7 +24,7 @@
     padding: auto;
     z-index: 2;
    }
-   .searchBar input ,placeholder {
+   .searchBar input {
   font-weight: bold;
   font-size: 2vw;
   border: transparent;
@@ -32,8 +32,12 @@
   text-align: center;
   background-color: gray;
   color: honeydew;
+  box-shadow: 10px 10px 8px black;
    }
-   
+   .searchUlTage li a {
+     color: white;
+     
+   }
   .formSection {
     width: 100%;
     height: auto;
