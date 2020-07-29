@@ -42,8 +42,8 @@ padding: auto;
     }
 pre {
 width: 100%;
-height: auto;
-overflow-y:scroll;
+height: 250px;
+overflow:scroll;
 font-family:monospace, sans-serif;
 font-style: italic;
 

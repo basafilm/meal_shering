@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
     .whereNull(knex.raw('reservations.number_of_guests >= meals.max_reservations'))
     .orWhereNotNull(knex.raw('reservations.number_of_guests >= meals.max_reservations'))
     .groupBy('meals.id')
+    .orderBy('meals.id' , 'desc')
     
             res.send(leftReservation)
 
