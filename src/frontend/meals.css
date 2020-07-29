@@ -31,14 +31,14 @@ padding: auto;
   button {
     background-color: rgb(202, 202, 202);
     border: gray solid;
-    padding:auto ;
-    width: auto;
-    height: 2rem;
+    width: 70%;
+    height: 4vw;
     text-align: center;
+    margin: auto;
+    padding: auto;
     border-radius: 5px;
     border-color: rgb(233, 168, 5);
     line-height: 3vw; 
-    height: 3vw;
     }
 pre {
 margin-bottom: 1em;
