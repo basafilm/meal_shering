@@ -73,7 +73,7 @@ font-size: 2vw;
     }
     .mealUl {
       width: 100%;
-      margin-left: 10%;
+      padding: 10px;
     }
     .mealUl li {
       width: fit-content;
