@@ -11,6 +11,9 @@
   width: 50%;
   padding: 10px;
 }
+.mealUl li {
+font-size: 2vw;
+}
 .mealDiv img {
   width: 50%;
   height: 30%;
@@ -72,7 +75,9 @@
       width: 100%;
       margin-left: 10%;
     }
-
+    .mealUl li {
+      font-size: 3vw;
+      }
     .mealDiv img {
       width: 100%;
       height: auto;      
