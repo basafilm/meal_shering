@@ -1,16 +1,23 @@
 .mealDiv {
   width: 100%;
+  height: auto;
   border-bottom: 1px groove grey;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: auto;
   padding: auto;
 }
 .mealUl {
-  width: 60%;
-  margin-left: 40%;
+  width: 50%;
+  padding: 10px;
 }
+.mealDiv img {
+  width: 50%;
+  height: 40%;
+  border-radius: 0%;
+  padding: 10px;
 
+}
 .reservReviewDiv {
   width: 100%;
   display: flex;
@@ -65,7 +72,15 @@
       width: 100%;
       margin-left: 10%;
     }
-  
+
+    .mealDiv img {
+      width: 100%;
+      height: 40%;
+      border-radius: 0%;
+      padding: 10px;
+      align-self: center;
+    
+    }
     .reserveForm {
       width: 100%;
       margin: auto;

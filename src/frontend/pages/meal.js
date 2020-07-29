@@ -12,17 +12,22 @@ window.handleMealRequest =  async (params) => {
   const div1 = document.createElement('div')
   div1.setAttribute('class', "mealDiv")
   firstSection.appendChild(div1)
-  const h3Tage = document.createElement('h3')
-        h3Tage.innerHTML = "You are booking for :" 
+  // const h3Tage = document.createElement('h4')
+  //       h3Tage.innerHTML = "You are booking for :" 
+  //       div1.appendChild(h3Tage)
  
   const ulTage =document.createElement('ul')
         ulTage.setAttribute('class', "mealUl")
-        div1.appendChild(h3Tage)
         div1.appendChild(ulTage)
 
 const getParams =   `/api/meals/${params.id}`;
 const mealResponse = await fetch(getParams)
 const meal = await mealResponse.json()
+
+            // image 
+            const images = ['../img/1.jpg','./../img/2.jpg','../img/3.jpg','../img/5.jpg', '../img/6.jpg' ]
+            const imageRandoom = images[Math.floor(Math.random() * (images.length))];
+                    const img = new Image()
 
 const ulTag = document.querySelector('ul');
 meal.forEach(meal => {
@@ -41,6 +46,8 @@ meal.forEach(meal => {
         <li><strong>Location:</strong> ${meal.location}</li>
         <li><strong>Date:</strong> ${date}/${d.getMonth()}/${d.getDay()} </li>
         <li><strong>When:</strong> ${houer} </li>`
+        img.src= imageRandoom
+        div1.appendChild(img)
 
         const formSection =document.querySelector('.formSection')
         const reservReviewDiv = document.createElement('div')
