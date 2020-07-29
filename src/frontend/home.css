@@ -51,7 +51,6 @@
   }
   .myImage {
     width: 100%;
-    border: solid black;
     border-radius: 5%;
     margin-top: -12%;
     margin-bottom: -18%;
@@ -106,6 +105,9 @@
         }
         .divAbout p {
           font-size: 3vw;
+        }
+        .myImage {
+          display: none;
         }
         .mealSharingForm  {
           width: 100%;
