@@ -48,7 +48,7 @@ meal.forEach(meal => {
         const reservReviewDiv = document.createElement('div')
               reservReviewDiv.setAttribute('class', "reservReviewDiv")
               formSection.appendChild(reservReviewDiv)   
-              if (meal.totalOfGuests > meal.max_reservations) {
+              if (meal.totalOfGuests < meal.max_reservations) {
                 reservReviewDiv.insertAdjacentHTML("afterbegin" , ` 
               
                 <form class="reserveForm" action="../../api/reservations" method ="post">
