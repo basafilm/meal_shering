@@ -30,10 +30,6 @@ meal.forEach(meal => {
   const date =d.getFullYear()
   const houer = d.toLocaleTimeString()
 
- // remaining of avilble seats
- const remainSeats= meal.max_reservations- meal.totalOfGuests
- console.log(meal.totalOfGuests)
-
         ulTag.innerHTML = `<li> <strong>Title:</strong> ${ meal.title} </li> 
         <li> <strong>Description:</strong> ${meal.description}</li> 
         <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 

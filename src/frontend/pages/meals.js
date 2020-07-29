@@ -74,7 +74,7 @@ const dive6 = document.createElement('dive')
           const houer = d.toLocaleTimeString()
 
             //console.log(day)
-            ulTag.innerHTML = `<li> <strong>Title:</strong> ${ meal.title} </li> 
+            ulTag.innerHTML = `<li class="firstLi"> <strong>Title:</strong> ${ meal.title} </li> 
             <li> <strong>Description:</strong> ${meal.mealDescrip}</li> 
             <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
             <li><strong>Price:</strong> ${meal.price}.Kr </li>
@@ -131,8 +131,6 @@ const dive6 = document.createElement('dive')
                       const remainBtn = document.createElement("button")
                       dive5.appendChild(remainBtn)
                       const remainH5Tag = document.createElement('h5') 
-console.log(remained)
-console.log(meal.totalOfGuests)
                       remainH5Tag.innerText=`${remained} Seat availble`
                       remainBtn.appendChild(remainH5Tag) 
 
