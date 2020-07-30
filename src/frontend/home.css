@@ -73,7 +73,6 @@
   .mealSharingForm label, button {
     font-size: 2vw;
   }
-
   .homeHref {
         position: absolute;
         text-align: center;
@@ -83,8 +82,12 @@
         border-width: 1px;
         padding: 5px;
       }
-
-
+/* res page  */
+.resDiv {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
 
   @media only screen and (max-width: 600px) {
         .formSection {

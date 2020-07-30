@@ -81,7 +81,7 @@ meal.forEach(meal => {
               <form class="reviewForm" action="../../api/reviews" method ="post">
               <h4> Want to give a feedback ?:</h4>
               <label for="description">Wrie a short review:</label>
-              <input type="text" id="description" name="description" maxlength = "40" required>
+              <input type="text" id="description" name="description" maxlength = "60" required>
             </select>
               <label for="stars"> Give some stars<span style="color: rgb(255,223,0);"> &#11089;</span>:</label>
               <select id="stars" name="stars">
