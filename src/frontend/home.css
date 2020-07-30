@@ -26,17 +26,16 @@
     z-index: 2;
    }
    .searchBar input {
-  font-weight: bold;
-  font-size: 2vw;
-  border: transparent;
-  border-radius:0.5em;
-  text-align: center;
-  background-color: gray;
-  color: honeydew;
-  box-shadow: 10px 10px 8px black;
+      font-weight: bold;
+      font-size: 2vw;
+      border: transparent;
+      border-radius:0.5em;
+      text-align: center;
+      background-color: rgb(111, 109, 109);
+      box-shadow: 10px 10px 8px black;
    }
    .searchUlTage li a {
-     text-shadow: 2px 2px black;
+     text-shadow: 2px black;
    }
   .formSection {
     width: 100%;
