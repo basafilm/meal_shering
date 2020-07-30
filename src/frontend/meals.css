@@ -1,6 +1,6 @@
 
 .firstSection {
-width: 100%;
+width: 90%;
 margin: auto;
 padding: auto;
   }
@@ -9,12 +9,12 @@ padding: auto;
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    color: #fff;
   } 
   .childDive {
     width: 30%;
     height: fit-content;
     margin: auto;
-    font-weight: bold;
     padding: 0px 0px 10px 10px;
   }
   .btnDive {
@@ -29,16 +29,13 @@ padding: auto;
     border-radius: 50%
   }
   button {
-    background-color: rgb(202, 202, 202);
-    border: gray solid;
-    width: 70%;
-    height: 4vw;
+    background-color: Transparent;
+    width: auto;
+    height: auto;
     text-align: center;
     margin: auto;
-    padding: auto;
-    border-radius: 5px;
-    border-color: rgb(233, 168, 5);
-    line-height: 3vw; 
+    padding: 5px;
+
     }
 pre {
 width: 100%;
@@ -49,11 +46,13 @@ font-style: italic;
 }
 pre li {
   width: 100%;
+  list-style: none;
   padding:auto;
 }
 strong {
   font-size: 2vw;
 }
+
 @media only screen and (max-width: 600px) {
   .mealGeneralDive {
     width: 100%;
@@ -81,29 +80,20 @@ strong {
     flex-direction: row;
   }
     button {
-    background-color: rgb(202, 202, 202);
-    border: gray solid;
-    padding:auto ;
-    width: 100%;
+    width: auto;
     height: auto;
+    padding:5px ;
     text-align: center;
-    border-radius: 5px;
-    border-color: rgb(233, 168, 5);
     line-height: 3vw; 
     }
     ul li {
       width: 100%;
-      font-size: 2.5vw;
+      font-size: 2vw;
     }
     strong {
-      font-size: 3vw;
-    }
-    a {
       font-size: 2.5vw;
     }
-    h4 {
-      font-size: large;
-    }
+
     .btnDive h5 {
       font-size: 2.5vw;
     }
@@ -119,6 +109,6 @@ strong {
     }
     pre li {
       width: 100%;
-      font-size: 2.5vw;
+      font-size: 2vw;
     }
     }

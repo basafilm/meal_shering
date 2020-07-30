@@ -43,7 +43,10 @@ meal.forEach(meal => {
         img.src= imageRandoom
         div1.appendChild(img)
 
-        const formSection =document.querySelector('.formSection')
+        const mainDiv = document.querySelector('.mainDiv')
+        const formSection =document.createElement('section');
+        formSection.setAttribute('class', "formSection")
+        mainDiv.appendChild(formSection)
         const reservReviewDiv = document.createElement('div')
               reservReviewDiv.setAttribute('class', "reservReviewDiv")
               formSection.appendChild(reservReviewDiv)   

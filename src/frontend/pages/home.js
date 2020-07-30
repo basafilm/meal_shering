@@ -21,7 +21,12 @@ const mealsSection = document.getElementsByClassName("firstSection")[0]
                     imagediv.appendChild(img)
 
 const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
-const formSection = document.querySelector('.formSection')
+            const mainDiv = document.querySelector('.mainDiv')
+            const formSection =document.createElement('section');
+            formSection.setAttribute('class', "formSection")
+            mainDiv.appendChild(formSection)
+
+// const formSection = document.querySelector('.formSection')
             const divAbout = document.createElement("div")
             divAbout.setAttribute('class' ,"divAbout")
             formSection.appendChild(divAbout)

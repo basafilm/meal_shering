@@ -106,41 +106,35 @@ const dive6 = document.createElement('dive')
                   dive3.appendChild(pre)
             }
                               // review Section
-                              const reviewsBtn = document.createElement("button")
-                              dive6.appendChild(reviewsBtn)
-                              const revATag = document.createElement('a') 
                               const mealPage = `/meal/`
-                              revATag.href = mealPage.concat(meal.id);
-                              revATag.innerText = "Give a feedback"
-                              reviewsBtn.appendChild(revATag) 
-
+                              const reviewsBtn = document.createElement("button")
+                                    reviewsBtn.innerText = "Give a feedback"
+                                    dive6.appendChild(reviewsBtn)
+                                    reviewsBtn.addEventListener("click", function (evt) { evt.preventDefault(); window.location.replace(mealPage.concat(meal.id)); return false; })
 
                 if (meal.max_reservations > meal.totalOfGuests) {
 
                   // book seat button
                   const bookBtn = document.createElement("button")
+                  bookBtn.innerText="Book Seat"
                   dive4.appendChild(bookBtn)
-                  const aTag = document.createElement('a') 
-                  const mealPage = `/meal/`
-                  aTag.href = mealPage.concat(meal.id);
-                  aTag.innerText = "Book Seat"
-                  bookBtn.appendChild(aTag) 
+                  bookBtn.addEventListener("click", function (evt) { evt.preventDefault(); window.location.replace(mealPage.concat(meal.id)); return false; })
 
                 // button for remain
                       const remained = meal.max_reservations - meal.totalOfGuests
                       const remainBtn = document.createElement("button")
                       dive5.appendChild(remainBtn)
-                      const remainH5Tag = document.createElement('h5') 
-                      remainH5Tag.innerText=`${remained} Seat availble`
-                      remainBtn.appendChild(remainH5Tag) 
+                      const remainPTag = document.createElement('p') 
+                      remainPTag.innerText=`${remained} Seat availble`
+                      remainBtn.appendChild(remainPTag) 
 
                     } else {
                       //const table = document.querySelector('section > table')
                       const btn = document.createElement("button")
                       dive4.appendChild(btn)
-                      const aTag = document.createElement('a') 
-                      aTag.innerText = "Fully booked!"
-                      btn.appendChild(aTag)
+                      const pTag = document.createElement('p') 
+                      pTag.innerText = "Fully booked!"
+                      btn.appendChild(pTag)
                     }
                   });
                   return secondLayer

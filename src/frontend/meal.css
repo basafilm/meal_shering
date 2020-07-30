@@ -1,7 +1,6 @@
 .mealDiv {
-  width: 100%;
+  width: 90%;
   height: auto;
-  border-bottom: 1px groove grey;
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -29,7 +28,7 @@ font-size: 2vw;
   padding: 5rem;
 }
 .reservReviewDiv h4 {
-  color: black;
+  color: #fff;
 }
 .reserveForm {
   width: 50%;
