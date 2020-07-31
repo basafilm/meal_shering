@@ -34,12 +34,11 @@ const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
                       `
                       <div class="mealSharingForm">
                       <h3>Share A New Meal : </h3>
-                    <form action="../../api/meals" method ="post">
-
+                    <form class="mealSharingInput" action="../../api/meals" method ="post">
                     <label for="hostName">Host name:</label>
-                    <input type="text" id="hostName" name="hostName" required><br>
+                    <input type="text" id="hostName" name="hostName" required>
                     <label for="title">Meal title:</label>
-                    <input type="text" id="title" name="title" required><br>
+                    <input type="text" id="title" name="title" required>
                     <label for="description">Meal description:</label>
                     <input type="text" id="description" name="description" required>
                     <label for="location">Location:</label>
