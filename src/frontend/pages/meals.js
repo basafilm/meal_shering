@@ -75,7 +75,7 @@ const dive6 = document.createElement('dive')
 
             //console.log(day)
             ulTag.innerHTML = ` 
-            <li class="firstLi"> <strong>Title:</strong> ${ meal.title} </li> 
+            <h4 class="firstLi"> <strong></strong> ${ meal.title} </h4> 
             <li> <strong>Description:</strong> ${meal.mealDescrip}</li> 
             <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
             <li><strong>Price:</strong> ${meal.price}.Kr </li>
@@ -83,7 +83,6 @@ const dive6 = document.createElement('dive')
             <li><strong>Date:</strong> ${date} </li>
             <li><strong>Time:</strong> ${houer} </li> 
             <li> <strong>Host Name:</strong> ${ meal.hostName} </li>`
-
             // review text Part
             // stars converter 
                         const starsNum = meal.totalStars
