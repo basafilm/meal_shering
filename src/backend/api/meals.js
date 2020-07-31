@@ -6,7 +6,7 @@ const knex = require("../database");
     router.get("/:id", async (request, response) => {
       const { id } = request.params;
       try {
-       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, meals.created_date, SUM(reservations.number_of_guests)  AS totalOfGuests'))
+       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.hostName, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, meals.created_date, SUM(reservations.number_of_guests)  AS totalOfGuests'))
         .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
         .where(knex.raw('meals.id =?',id))
         .groupBy('meals.id')
@@ -26,6 +26,7 @@ const knex = require("../database");
     router.post("/", async (req, response) => {
       try {
         const newMeals = {
+          hostName: req.body.hostName,
           title: req.body.title,
           description: req.body.description,
           location: req.body.location,
@@ -48,6 +49,7 @@ const knex = require("../database");
       try {
         const updatMeal = await knex('meals').where({id})
         .update({
+              hostName: req.body.hostName,
               title: req.body.title,
               description: req.body.description,
               location: req.body.location,

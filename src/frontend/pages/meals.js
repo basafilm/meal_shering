@@ -74,13 +74,15 @@ const dive6 = document.createElement('dive')
           const houer = d.toLocaleTimeString()
 
             //console.log(day)
-            ulTag.innerHTML = `<li class="firstLi"> <strong>Title:</strong> ${ meal.title} </li> 
+            ulTag.innerHTML = ` 
+            <li class="firstLi"> <strong>Title:</strong> ${ meal.title} </li> 
             <li> <strong>Description:</strong> ${meal.mealDescrip}</li> 
             <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
             <li><strong>Price:</strong> ${meal.price}.Kr </li>
             <li><strong>Location:</strong> ${meal.location}</li>
             <li><strong>Date:</strong> ${date} </li>
-            <li><strong>Time:</strong> ${houer} </li> `
+            <li><strong>Time:</strong> ${houer} </li> 
+            <li> <strong>Host Name:</strong> ${ meal.hostName} </li>`
 
             // review text Part
             // stars converter 

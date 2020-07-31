@@ -33,13 +33,15 @@ meal.forEach(meal => {
  // remaining of avilble seats
  const remainSeats= meal.max_reservations- meal.totalOfGuests
 
-        ulTag.innerHTML = `<li> <strong>Title:</strong> ${ meal.title} </li> 
+        ulTag.innerHTML = `
+        <li> <strong>Title:</strong> ${ meal.title} </li> 
         <li> <strong>Description:</strong> ${meal.description}</li> 
         <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
         <li><strong>Price:</strong> ${meal.price}.Kr </li>
         <li><strong>Location:</strong> ${meal.location}</li>
         <li><strong>Date:</strong> ${date}/${d.getMonth()}/${d.getDay()} </li>
-        <li><strong>Time:</strong> ${houer} </li>`
+        <li><strong>Time:</strong> ${houer} </li>
+        <li> <strong>Host Name:</strong> ${ meal.hostName} </li>`
         img.src= imageRandoom
         div1.appendChild(img)
 

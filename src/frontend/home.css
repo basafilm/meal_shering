@@ -68,6 +68,8 @@
     display: flex;
     flex-direction: column;
     font-size: 2vw;
+    background-color: transparent;
+    border: solid 2px white;
   }
   .mealSharingForm label {
     font-size: 2vw;

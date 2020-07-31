@@ -36,13 +36,15 @@ const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
                       <h3>Share A New Meal : </h3>
                     <form action="../../api/meals" method ="post">
 
-                    <label for="title">Title:</label>
+                    <label for="hostName">Host name:</label>
+                    <input type="text" id="hostName" name="hostName" required><br>
+                    <label for="title">Meal title:</label>
                     <input type="text" id="title" name="title" required><br>
-                    <label for="description">Description:</label>
+                    <label for="description">Meal description:</label>
                     <input type="text" id="description" name="description" required>
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location" required>
-                    <label for="when"> When:(future date)</label>
+                    <label for="when"> When:</label>
                     <input type="datetime" id="when" name="when" placeholder ="e.g. ${courentDate}"  min="${courentDate}" required>
                     <label for="max_reservations"> max_reservations:</label>
                     <input type="text" id="max_reservations" name="max_reservations" required>
@@ -66,7 +68,7 @@ const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
         divAbout.appendChild(myImage)
 
         const aboutP = document.createElement("p")
-        aboutP.innerText = "This is a simple web page made for hyf-Copenhagen NodeJS week 4 homework. But you can use this website and share your meal by filling out the Meal Sharing form. People can find your meal among others in the menus and they will be able to reserve a seat. The registration form limited by maximum space for reservation. please put a correct future date otherwise your meal will not be added to the menu. Your meal will be deleted when its due date expired."
+        aboutP.innerText = "This is a simple web page made for hyf-Copenhagen NodeJS week 4 homework. But you can use this website and share your meal by filling out the Share A New Meal form. People can find your meal in the menus and they will be able to reserve a seat. The registration form limited by maximum space for reservation. please insert your name as a host so, people can know you and please put a correct future date otherwise your meal will not be added to the menu. Your meal will be deleted when its due date expired. If you want to host again you should fillout the form again"
         divAbout.appendChild(aboutP)
 
 // search function for meals
