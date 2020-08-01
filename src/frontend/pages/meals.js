@@ -66,10 +66,11 @@ const dive6 = document.createElement('dive')
             const imageRandoom = images[Math.floor(Math.random() * (images.length))];
                     const img = new Image()
                     dive2.appendChild(img)
-                    if (!meal.image) {
-                        img.src= imageRandoom   
-                    } else {
+                    if (meal.image==null) {
                         img.src= meal.image
+                   
+                    } else {
+                        img.src= imageRandoom  
                     }
 
 
