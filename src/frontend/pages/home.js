@@ -51,7 +51,7 @@ const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
                     <input type="text" id="price" name="price" required>
                     <label for="created_date">Created Date:</label>
                     <input type="datetime" id="created_date" name="created_date" value="${courentDate}" required>
-                    <label for="image">Meal image:</label>
+                    <label for="image">Meal image (img size:100kb):</label>
                     <input type="file" id="image" name="image" multiple required>
                     
                       <button type ="submit" value= "Submit">Submit</button>

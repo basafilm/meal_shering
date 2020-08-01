@@ -23,6 +23,9 @@ const meal = await mealResponse.json()
             const images = ['../img/1.jpg','./../img/2.jpg','../img/3.jpg','../img/5.jpg', '../img/6.jpg' ]
             const imageRandoom = images[Math.floor(Math.random() * (images.length))];
                     const img = new Image()
+                    div1.appendChild(img)
+                  
+
 
 const ulTag = document.querySelector('ul');
 meal.forEach(meal => {
@@ -42,8 +45,12 @@ meal.forEach(meal => {
         <li><strong>Date:</strong> ${date}/${d.getMonth()}/${d.getDay()} </li>
         <li><strong>Time:</strong> ${houer} </li>
         <li> <strong>Host Name:</strong> ${ meal.hostName} </li>`
-        img.src= imageRandoom
-        div1.appendChild(img)
+
+        if (!meal.image) {
+          img.src= imageRandoom   
+      } else {
+          img.src= meal.image
+      }
 
         const mainDiv = document.querySelector('.mainDiv')
         const formSection =document.createElement('section');
