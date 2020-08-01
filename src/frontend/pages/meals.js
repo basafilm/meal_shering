@@ -17,6 +17,7 @@ window.handleMealsRequest = async () => {
   const avilbleResponse = await fetch("/api/available_reserve")
   const availbeRes = await avilbleResponse.json()
   // pushing all input from diffirent arry to one to make ney array
+
   const reservetTotal =[]
   reservetTotal.push(availbeRes)
 
@@ -60,13 +61,17 @@ const dive6 = document.createElement('dive')
         const revUlTag = document.createElement('ul');
         dive3.appendChild(revUlTag)
 
-
             // image 
             const images = ['../img/1.jpg','./../img/2.jpg','../img/3.jpg','../img/5.jpg', '../img/6.jpg' ]
             const imageRandoom = images[Math.floor(Math.random() * (images.length))];
                     const img = new Image()
-                    img.src= imageRandoom
                     dive2.appendChild(img)
+                    if (!meal.image) {
+                        img.src= imageRandoom   
+                    } else {
+                        img.src= meal.image
+                    }
+
 
         // date by details
           const d = new Date(meal.when)

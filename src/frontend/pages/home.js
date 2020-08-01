@@ -34,7 +34,7 @@ const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
                       `
                       <div class="mealSharingForm">
                       <h3>Share A New Meal : </h3>
-                    <form class="mealSharingInput" action="../../api/meals" method ="post">
+                    <form class="mealSharingInput" method ="post" action="../../api/meals" enctype="multipart/form-data">
                     <label for="hostName">Host name:</label>
                     <input type="text" id="hostName" name="hostName" required>
                     <label for="title">Meal title:</label>
@@ -51,6 +51,8 @@ const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
                     <input type="text" id="price" name="price" required>
                     <label for="created_date">Created Date:</label>
                     <input type="datetime" id="created_date" name="created_date" value="${courentDate}" required>
+                    <label for="image">Meal image:</label>
+                    <input type="file" id="image" name="image" multiple required>
                     
                       <button type ="submit" value= "Submit">Submit</button>
                   <h3>Organics : </h3>

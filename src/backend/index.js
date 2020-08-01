@@ -12,6 +12,7 @@ const port = process.env.PORT || 5000;
 // Serve the built client html
 const buildPath = path.join(__dirname, "./../frontend");
 app.use(express.static(buildPath));
+app.use('/uploads', express.static('uploads'));
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded({ extended: true }));

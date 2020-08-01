@@ -1,12 +1,41 @@
 const express = require("express");
 const router = express.Router();
+const multer  = require('multer')
 const knex = require("../database");
+
+//image 
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, new Date().toISOString() + file.originalname)
+  }
+});
+ 
+const fileFilter = (req, file, cb) => {
+      if (file.mimetype=== 'image/jpeg' || file.mimetype=== 'image/png') {
+        cb(null, true)
+      } else {
+        cb(null, false)
+      } cb(new Error('I don\'t have a clue!'))
+    }
+
+
+const upload = multer({
+  storage: storage, 
+  limits:{
+    fileSize: 1024 * 1024 * 5
+  },
+  // fileFilter: fileFilter
+});
+
 
     // Returns meal by id	
     router.get("/:id", async (request, response) => {
       const { id } = request.params;
       try {
-       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.hostName, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, meals.created_date, SUM(reservations.number_of_guests)  AS totalOfGuests'))
+       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.hostName, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, meals.created_date, meals.image, SUM(reservations.number_of_guests)  AS totalOfGuests'))
         .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
         .where(knex.raw('meals.id =?',id))
         .groupBy('meals.id')
@@ -22,8 +51,9 @@ const knex = require("../database");
       }
     });
 
+
 // Adds a new meal	
-    router.post("/", async (req, response) => {
+    router.post("/", upload.single('image'), async (req, res) => {
       try {
         const newMeals = {
           hostName: req.body.hostName,
@@ -33,12 +63,13 @@ const knex = require("../database");
           when: req.body.when,
           max_reservations: req.body.max_reservations,
           price: req.body.price,
-          created_date: req.body.created_date
+          created_date: req.body.created_date,
+          image : req.file.path
         }
         await knex('meals').insert(newMeals)
-        response.redirect("/res")
+        res.redirect("/res")
       } catch (error) {
-        throw error;
+        throw error
       }
     });
 
@@ -56,7 +87,7 @@ const knex = require("../database");
               when: req.body.when,
               max_reservations: req.body.max_reservations,
               price: req.body.price,
-              created_date: req.body  .created_date
+              created_date: req.body  .created_date,
 
             })
         res.json(`${updatMeal} meal with id : ${id} updated!`);
