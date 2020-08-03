@@ -4,7 +4,7 @@
     margin: auto;
     padding: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-around;
     border-bottom: 1px groove grey;
   }
@@ -20,9 +20,8 @@
   }
   .searchBar {
     align-self: center;
-    margin-top: 13%;
     position: absolute;
-    padding: auto;
+    padding-top: 25%;
     z-index: 2;
    }
    .searchBar input {

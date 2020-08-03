@@ -20,7 +20,18 @@ const mealsSection = document.getElementsByClassName("firstSection")[0]
                     img.setAttribute('class', "homeImages")
                     imagediv.appendChild(img)
 
-const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
+      const courentDate = setInterval(tick, 1000);
+      function tick () {
+            const date = new Date().toISOString().slice(0, 19).replace('T', ' ')
+            const getcreatedDate = document.getElementById('created_date')
+            getcreatedDate.setAttribute('value', date )
+
+            const getWhen = document.getElementById('when')
+            getWhen.setAttribute('min', date)
+
+      }
+     
+             
             const mainDiv = document.querySelector('.mainDiv')
             const formSection =document.createElement('section');
             formSection.setAttribute('class', "formSection")
@@ -44,13 +55,13 @@ const courentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location" required>
                     <label for="when"> When:</label>
-                    <input type="datetime" id="when" name="when" placeholder ="e.g. ${courentDate}"  min="${courentDate}" required>
+                    <input type="datetime" id="when" name="when" placeholder ="e.g. yyyy-mm-dd hh:mm:ss" required>
                     <label for="max_reservations"> max_reservations:</label>
                     <input type="text" id="max_reservations" name="max_reservations" required>
                     <label for="price">Price:</label>
                     <input type="text" id="price" name="price" required>
                     <label for="created_date">Created Date:</label>
-                    <input type="datetime" id="created_date" name="created_date" value="${courentDate}" required>
+                    <input type="datetime" id="created_date" name="created_date" required>
                     <label for="image">Meal image (img size:100kb):</label>
                     <input type="file" id="image" name="image" multiple required>
                     
