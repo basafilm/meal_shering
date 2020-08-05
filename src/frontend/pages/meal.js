@@ -37,6 +37,7 @@ meal.forEach(meal => {
  const remainSeats= meal.max_reservations- meal.totalOfGuests
 
         ulTag.innerHTML = `
+        <div class="seatLeft"> Only ${remainSeats} seat available</div>
         <li> <strong>Title:</strong> ${ meal.title} </li> 
         <li> <strong>Description:</strong> ${meal.description}</li> 
         <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
@@ -65,7 +66,7 @@ meal.forEach(meal => {
               
                 <form class="reserveForm" action="../../api/reservations" method ="post">
                 <h4>Please fill out reservation form:</h4>
-               
+
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required>
                 <label for="secondName">Last Name:</label>
@@ -78,8 +79,8 @@ meal.forEach(meal => {
                 <input type="email" id="emailAdd" name="emailAdd" placeholder="enter your email" required>
                 <input type ="hidden" name= "meal_Id" value= ${meal.id}>
   
-                <label for="number_of_guests">Number of guests (only ${remainSeats} seat available): </label>
-                <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remainSeats} required>
+                <label for="number_of_guests">Number of guests: </label>
+                <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remainSeats}  placeholder="enter/select the number" required>
   
                 <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
                 </form>`)

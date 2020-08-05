@@ -28,7 +28,6 @@ const mealsSection = document.getElementsByClassName("firstSection")[0]
 
             const getWhen = document.getElementById('when')
             getWhen.setAttribute('min', date)
-
       }
      
              

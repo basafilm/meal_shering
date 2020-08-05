@@ -60,7 +60,11 @@ font-size: 2vw;
     width: 30%;
     font-size: 2vw;
   }
-
+.seatLeft {
+  width: 50%;
+  border: 1px groove grey;
+  padding-left:3px;
+}
   @media only screen and (max-width: 600px) {
     .mealDiv {
       width: 100%;
