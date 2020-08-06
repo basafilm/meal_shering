@@ -1,8 +1,10 @@
 
 .firstSection {
-width: 90%;
-margin: auto;
-padding: auto;
+    width: 90%;
+    margin: auto;
+    padding: auto;
+    display: flex; 
+   flex-direction: column;
   }
   .mealGeneralDive {
     width: 100%;
@@ -109,4 +111,5 @@ pre li {
       width: 100%;
       font-size: 2vw;
     }
+
     }

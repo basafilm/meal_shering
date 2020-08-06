@@ -37,7 +37,6 @@ meal.forEach(meal => {
  const remainSeats= meal.max_reservations- meal.totalOfGuests
 
         ulTag.innerHTML = `
-        <div class="seatLeft"> Only ${remainSeats} seat available</div>
         <li> <strong>Title:</strong> ${ meal.title} </li> 
         <li> <strong>Description:</strong> ${meal.description}</li> 
         <li> <strong>Max-reservation:</strong> ${meal.max_reservations}</li> 
@@ -63,7 +62,7 @@ meal.forEach(meal => {
               formSection.appendChild(reservReviewDiv)   
               if (meal.totalOfGuests < meal.max_reservations) {
                 reservReviewDiv.insertAdjacentHTML("afterbegin" , ` 
-              
+                <div class="reserveFormAndFlash">
                 <form class="reserveForm" action="../../api/reservations" method ="post">
                 <h4>Please fill out reservation form:</h4>
 
@@ -83,7 +82,14 @@ meal.forEach(meal => {
                 <input type="number" id="number_of_guests" name="number_of_guests" min="1"max=${remainSeats}  placeholder="enter/select the number" required>
   
                 <button type ="submit" value= "Submit" onclick="ValidateEmail();">Submit</button>
-                </form>`)
+                </form>
+                    <div class="seatLeft">
+                    <p class="seatLeftRes">Open for reservation</p>
+                    <p>Only ${remainSeats} seat left :</p>
+                    </div> 
+                </div>
+                `)
+
               }  else {
                 reservReviewDiv.insertAdjacentHTML("afterbegin" , ` 
               
