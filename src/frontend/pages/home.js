@@ -20,6 +20,8 @@ const mealsSection = document.getElementsByClassName("firstSection")[0]
                     img.setAttribute('class', "homeImages")
                     imagediv.appendChild(img)
 
+       const getDate = new Date().toISOString().slice(0, 19).replace('T', ' ')
+
       const courentDate = setInterval(tick, 1000);
       function tick () {
             const date = new Date().toISOString().slice(0, 19).replace('T', ' ')
@@ -54,21 +56,21 @@ const mealsSection = document.getElementsByClassName("firstSection")[0]
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location" required>
                     <label for="when"> When:</label>
-                    <input type="datetime" id="when" name="when" placeholder ="e.g. yyyy-mm-dd hh:mm:ss" required>
+                    <input type="datetime" id="when" name="when" placeholder ="e.g. ${getDate}" required>
                     <label for="max_reservations"> max_reservations:</label>
                     <input type="text" id="max_reservations" name="max_reservations" required>
                     <label for="price">Price:</label>
                     <input type="text" id="price" name="price" required>
                     <label for="created_date">Created Date:</label>
-                    <input type="datetime" id="created_date" name="created_date" required>
-                    <label for="image">Meal image (img size:100kb):</label>
-                    <input type="file" id="image" name="image" multiple required>
-                    
+                    <input type="datetime" id="created_date" name="created_date" required> 
                       <button type ="submit" value= "Submit">Submit</button>
                   <h3>Organics : </h3>
                   <p>It is difficult to get organic food in the most restaurants or even at home nowadays, but we are willing to serve you your best organic food choice.</p>
                   </form>
                       </div>`)
+
+//      <label for="image">Meal image (img size:100kb):</label> 
+//     <input type="file" id="image" name="image" multiple required> 
 
         const h3Sabout = document.createElement("h3")
         h3Sabout.innerText= "About This Page:"

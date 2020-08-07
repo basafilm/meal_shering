@@ -36,7 +36,7 @@ const upload = multer({
     router.get("/:id", async (request, response) => {
       const { id } = request.params;
       try {
-       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.hostName, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, meals.created_date, meals.image, SUM(reservations.number_of_guests)  AS totalOfGuests'))
+       let meal = await knex('meals').select(knex.raw('DISTINCT meals.id, meals.hostName, meals.title, meals.description, meals.location, meals.when, meals.max_reservations, meals.price, meals.created_date, SUM(reservations.number_of_guests)  AS totalOfGuests'))
         .leftJoin(knex.raw('reservations ON reservations.meal_Id = meals.id'))
         .where(knex.raw('meals.id =?',id))
         .groupBy('meals.id')
@@ -65,7 +65,7 @@ const upload = multer({
           max_reservations: req.body.max_reservations,
           price: req.body.price,
           created_date: req.body.created_date,
-          image : req.file.path
+          // image : req.file.path
         }
         await knex('meals').insert(newMeals)
         res.redirect("/res")

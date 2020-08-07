@@ -66,12 +66,12 @@ const dive6 = document.createElement('dive')
             const imageRandoom = images[Math.floor(Math.random() * (images.length))];
                     const img = new Image()
                     dive2.appendChild(img)
-                    if (meal.image==null) {
-                        img.src= meal.image
+                  //   if (meal.image==null) {
+                  //       img.src= meal.image
                    
-                    } else {
+                  //   } else {
                         img.src= imageRandoom  
-                    }
+                  //   }
 
 
         // date by details
