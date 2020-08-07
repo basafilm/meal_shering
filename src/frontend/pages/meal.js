@@ -46,12 +46,12 @@ meal.forEach(meal => {
         <li><strong>Time:</strong> ${houer} </li>
         <li> <strong>Host Name:</strong> ${ meal.hostName} </li>`
 
-        if (meal.image==null) {
-          img.src= meal.image
+      //   if (meal.image==null) {
+      //     img.src= meal.image
      
-      } else {
+      // } else {
           img.src= imageRandoom  
-      }
+      // }
 
         const mainDiv = document.querySelector('.mainDiv')
         const formSection =document.createElement('section');
